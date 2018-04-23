@@ -1,0 +1,49 @@
+@import 'mediaqueries';
+#flex-container{
+  display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
+  .btn-group {
+      display: flex;
+      @include phone {
+          flex-direction: column;
+          justify-content: center;
+      }
+      button {
+          margin: 20px;
+          position: relative;
+          width: 100px;
+          height: 100px; // border: none;
+          border-radius: 50% 0 50% 50%;
+          border: 2px solid rgb(170, 49, 49);
+          background-size: cover;
+          &:active {
+            transform: scale(.5);
+            transition: all .2s;
+          }
+          &::-moz-focus-inner {
+            padding: 0px 2px 0px 2px;
+            border: none;
+          }
+          @include phone {
+            margin: auto;
+          }
+        }
+      }
+      #pierre {
+        background-image: url(../../images/pierre.jpeg);
+      }
+      #feuille {
+        background-image: url(../../images/feuille.png);
+      }
+      #ciseaux {
+        background-image: url(../../images/ciseaux.jpeg);
+      }
+      #display {
+        white-space: pre-line;
+        text-align: center;
+        margin: auto;
+        padding: 1rem;
+      }
+}
